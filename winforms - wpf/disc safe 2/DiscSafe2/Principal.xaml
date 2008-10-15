@@ -1,0 +1,36 @@
+﻿<Window x:Class="DiscSafe2.Principal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Disc Safe 2.0" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="389*"></ColumnDefinition>
+            <ColumnDefinition Width="389*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <GridSplitter Grid.Column="0" Grid.Row="1" Width="5"/>
+        <TreeView Grid.Column="0" Grid.Row="1">
+            <TreeViewItem Header="Desktop">
+                <TreeViewItem Header="Computer">
+                    …
+                </TreeViewItem>
+                <TreeViewItem Header="Recycle Bin">
+                    …
+                </TreeViewItem>
+                <TreeViewItem Header="Control Panel">
+                    <TreeViewItem Header="Programs"/>
+                    <TreeViewItem Header="Security"/>
+                    <TreeViewItem Header="User Accounts"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Network">
+                    …
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="jp_live_search.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="jp_live_search_MSNSearch_MSNSearchService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://soap.search.live.com:80/webservices.asmx</Value>
+    </Setting>
+    <Setting Name="ResultadosPorPagina" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
