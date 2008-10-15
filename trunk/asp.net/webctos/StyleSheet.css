@@ -1,0 +1,103 @@
+﻿html, body {
+background:white url(img/bg_body.png) repeat-x;
+margin:0;
+text-align:center;
+height:100%;}
+* {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#445666;}
+a {
+color:#3570AC;}
+a:hover {
+text-decoration: underline;
+color:#254F78;
+}
+#Controles
+{
+	position:relative;
+	top:15px;
+}
+#Titulo
+{
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	background-color: #4e9ae7;
+}
+#Login
+{
+	width: 300px;
+	height: 200px;
+	left:50%;
+	margin-left:-150px;
+	top:50%;
+	margin-top:-100px;
+	display: block;
+	position: absolute;
+	background-color: #daeafa;
+	border-style: outset;
+}
+
+#btnEntrar
+{
+	text-align:center;
+	position:relative;
+	top:20px;
+}
+
+#link
+{
+	position:absolute;
+	bottom:2px;
+	right:2px;
+}
+#contenido
+{
+	background-color:white;
+	width:710px;
+	height:800px;
+	padding:10px 0 15px;
+	margin:0 auto;
+	text-align:left;
+}
+#divLinks
+{
+	background-color:White;	
+	
+}
+#divGrid
+{
+	margin-top:50px;
+	float:left;
+}
+#divTituloAg
+{
+	background:#507CD1;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+}
+.divTablaEditar
+{
+	float:left;
+	background:white;
+	margin-top:50px;		
+	margin-left:15px;
+}
+#divTituloAg span
+{
+	color:white;
+	font-weight:bolder;
+{
+
+}
+.tituloTabla
+{
+	background:#507CD1;
+	font-weight:bolder;
+	color:white;
+	padding-top:5px;
+	padding-bottom:5px;
+}

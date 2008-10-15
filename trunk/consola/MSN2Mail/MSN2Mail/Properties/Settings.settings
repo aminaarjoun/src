@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MSN2Mail.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="mailSender" Type="System.String" Scope="User">
+      <Value Profile="(Default)">softdejp@gmail.com</Value>
+    </Setting>
+    <Setting Name="passSender" Type="System.String" Scope="User">
+      <Value Profile="(Default)">autofill</Value>
+    </Setting>
+    <Setting Name="msnUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">initestmsn01@hotmail.com</Value>
+    </Setting>
+    <Setting Name="msnPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">qpwoeiru</Value>
+    </Setting>
+    <Setting Name="mailTo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">j.pabloblanco@gmail.com</Value>
+    </Setting>
+    <Setting Name="timespan" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:15:00</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

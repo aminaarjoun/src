@@ -1,0 +1,20 @@
+                _                         _ _ _       
+               | |                       | (_) |      
+__  ___ __ ___ | | __   _____   ___  __ _| |_| |_ ___ 
+\ \/ / '_ ` _ \| | \ \ / / __| / __|/ _` | | | __/ _ \
+ >  <| | | | | | |  \ V /\__ \ \__ \ (_| | | | ||  __/
+/_/\_\_| |_| |_|_|   \_/ |___/ |___/\__, |_|_|\__\___|
+                                       | |            
+                                       |_| 
+									   
+Hola!
+
+Bienvenido a XML vs SQLite, una comparativa entre dos alternativas para persistir datos complejos y en forma portable.
+Los parámetros que se van a tomar en cuenta en este test son: 	
+1. Tiempo de guardado (memoria a disco)
+2. Tiempo de recuperación 
+3. Tamaño final de los archivos.
+
+Los datos de prueba son generados aleatoriamente, se trata de "Clientes" con sus respectivos "Autos" (hasta 3 por persona)
+
+Presiona Enter para comenzar...

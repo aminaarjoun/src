@@ -1,0 +1,100 @@
+﻿body
+{
+	font-family: Calibri, Verdana;
+	font-size: small;
+	background-image: url(img/25original.gif);
+}
+#contenido
+{
+	background-color: white;
+	border-style:solid;
+	border-width:1px;
+	width:500px;
+	left:50%;
+	margin-left:-250px;
+	position:absolute;
+}
+.contacto
+{	
+	position:relative;
+	width:400px;
+	height:auto;
+	margin:auto 10px auto 10px;
+	border:1px solid black;
+	
+}
+
+#listadecontactos
+{
+	position:relative;
+	height:auto;
+	width:500px;
+	text-align:left;
+}
+
+#Titulo
+{
+	
+	text-align:center;
+}
+#AgNuevo
+{
+	float:left;
+	margin-top:50px;
+	margin-left:30px;
+	
+}
+
+#modalPage
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px; left: 0px;
+}
+.modalBackground
+{
+    filter: Alpha(Opacity=40); -moz-opacity:0.4; opacity: 0.4;
+    width: 100%; height: 100%; background-color: #999999;
+    position: absolute;
+    z-index: 500;
+    top: 0px; left: 0px;
+}
+.modalContainer
+{
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    z-index: 750;
+}
+.modal
+{
+    background-color: white;
+    border: solid 1px black; position: relative;
+    top: -150px;
+    left: -150px;
+    z-index: 1000;
+    width: 300px;
+    padding: 0px;
+}
+.modalTop
+{
+    width: 292px;
+    background-color: #009999;
+    padding: 4px;
+    color: #ffffff;
+    text-align: right;
+}
+.modalTop a, .modalTop a:visited
+{
+    color: #ffffff;
+}
+.modalBody
+{
+    padding: 10px;
+}
+#AgContacto
+{
+}

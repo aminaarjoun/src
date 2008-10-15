@@ -1,0 +1,201 @@
+<html>
+<head><title>Las formulas de Tefa</title></head>
+<body>
+
+<script type="text/javascript">
+
+
+function LeanBodyMassWomen(Factor1, Factor2, Factor3, Factor4, Factor5){
+	var lbmWomen=0;
+	lbmWomen=((Factor1 /0.45)* 0.732 + 8.987) + ((Factor2/2.54) / 3.140) - ((Factor3/2.54) * 0.157) - ((Factor4/2.54) * 0.249) + ((Factor5/2.54) * 0.434);
+    lbmWomen = Math.round(lbmWomen*100)/100;
+	return lbmWomen;
+}
+function LeanBodyMassMen(Factor1, Factor2){
+    var lbmMen=0;
+    lbmMen=((Factor1/0.45)*1.082+94.42)-((Factor2/2.54)*4.15);
+    lbmMen=Math.round( lbmMen*100)/100;
+    return lbmMen;
+    
+}
+function BodyFatWeightWomen(factor1, LeanBodyMassWomen){
+    var bfwWomen=0;
+    bfwWomen=factor1-LeanBodyMassWomen;
+    bfwWomen=Math.round(bfwWomen*100)/100;    
+    return bfwWomen;
+}
+
+function BodyFatWeightMen(Factor1,LeanBodyMassMen){
+    var bfwMen=0;
+    bfwMen=Factor1-LeanBodyMassMen;
+    bfwMen=Math.round(bfwMen*100)/100;
+    return bfwMen;
+}
+function BodyFatPercentageWomen(BodyFatWeightWomen,totalBodyWeight){
+    var bfpWomen=0;
+    bfpWomen=(BodyFatWeightWomen*100)/totalBodyWeight;
+    bfpWomen=Math.round(bfpWomen*100)/100;
+    return bfpWomen;
+}
+
+function BodyFatPercentageMen(BodyFatWeight, factor1){
+    var bfpMan=0;
+    bfpMan=(BodyFatWeight*100)/factor1;
+    bfpMan=Math.round(bfpMan*100)/100;
+    return bfpMan;
+}
+
+function updateFatWomen(){
+    var Factor1=document.getElementById("f1w").value;
+    
+    //update lean body mass value
+    var lbmWomen=LeanBodyMassWomen(Factor1, document.getElementById("f2w").value, document.getElementById("f3w").value, document.getElementById("f4w").value, document.getElementById("f5w").value);
+    document.getElementById("lbmWomen").value=lbmWomen;
+    
+    //update body fat weight value
+    var bfwWomen=BodyFatWeightWomen(Factor1,lbmWomen);
+    document.getElementById("bfwWomen").value=bfwWomen;
+    
+    //update fat percentage
+    var bfpWomen=BodyFatPercentageWomen(bfwWomen,Factor1);
+    document.getElementById("bfpWomen").value=bfpWomen;
+    
+}
+
+function updateFatMen(){
+   var Factor1=document.getElementById("f1m").value;
+   var Factor2=document.getElementById("f2m").value;
+   
+   //update lean body mass value
+   var lbmMen=LeanBodyMassMen(Factor1,Factor2);
+   document.getElementById("lbmMen").value=lbmMen;
+   
+   //update body fat weight value
+   var bfwMen=BodyFatWeightMen(Factor1,lbmMen);
+   document.getElementById("bfwMen").value=bfwMen;
+   
+   //update body fat percentage value
+   var bfpmen=BodyFatPercentageMen(bfwMen,Factor1);
+   document.getElementById("bfpMen").value=bfpmen;
+   
+}
+
+function updateRmrMen(){
+    //update rmr value
+    var h=document.getElementById("heightMen").value;
+    var w=document.getElementById("weightMen").value;
+    var a=document.getElementById("ageMen").value;
+    document.getElementById("rmrMen").value= rmrMen(h,w,a);
+}
+    
+function updateRmrWomen(){
+      //update rmr value
+    var h=document.getElementById("heightWomen").value;
+    var w=document.getElementById("weightWomen").value;
+    var a=document.getElementById("ageWomen").value;
+    document.getElementById("rmrWomen").value= rmrWomen(h,w,a);
+}
+function rmrWomen(height, weight, age){
+    var rmr=0;
+    rmr=655+(4.57*(height/2.54))+(4.36*(weight/0.45))-(4.7*age);
+    rmr=Math.round(rmr*100)/100;
+    return rmr;
+}
+function rmrMen(height, weight, age){
+    var rmr=0;
+    rmr=66+(12.7*(height/2.54))+(6.27*(weight/0.45))-(6.8*age);
+    rmr=Math.round(rmr*100)/100;
+    return rmr;
+}
+</script>
+
+<b>Cómo calcular tu porcentaje de grasa corporal:</b>
+<br />
+<br />
+<u>Para las mujeres:</u>
+<br/>
+<br/>
+Peso total en kilos:
+<input type="text" id="f1w" onchange="updateFatWomen()" />
+<br/>
+Circunferencia de la muñeca en centímetros:
+<input type="text" id="f2w" onchange="updateFatWomen()" />
+<br/>
+Medida de la cintura en centímetros, a la altura del ombligo
+<input type="text" id="f3w" onchange="updateFatWomen()" />
+<br/>
+Medida de las caderas en centímetros:
+<input type="text" id="f4w" onchange="updateFatWomen()" />
+<br/>
+Medida de la circunferencia del antebrazo, en centímetros:
+<input type="text" id="f5w" onchange="updateFatWomen()" />
+<br/>
+<br/>
+Masa corporal nominal:
+<input type="text" id="lbmWomen" />
+<br/>
+Peso de la grasa corporal:
+<input type="text" id="bfwWomen" />
+<br/>
+Porcentaje de grasa corporal:
+<input type="text" id="bfpWomen" />
+<br />
+<br />
+<u>Para los hombres:</u>
+<br/>
+<br/>
+Peso total en kilos:
+<input type="text" id="f1m" onchange="updateFatMen()" />
+<br/>
+Medida de la cintura en centímetros:
+<input type="text" id="f2m" onchange="updateFatMen()" />
+<br/>
+<br/>
+Masa corporal nominal:
+<input type="text" id="lbmMen" />
+<br/>
+Peso de la grasa corporal:
+<input type="text" id="bfwMen" />
+<br/>
+Porcentaje de la grasa corporal:
+<input type="text" id="bfpMen" />
+<br />
+<br />
+<b>Calculando tu tasa metabólica en reposo (RMR por sus siglas en inglés):</b>
+<br />
+<br />
+<u>For men:</u>
+<br/>
+<br/>
+Altura expresada en centímetros:
+<input type="text" id="heightMen" onchange="updateRmrMen()" />
+<br/>
+Peso expresado en kilos:
+<input type="text" id="weightMen" onchange="updateRmrMen()" />
+<br/>
+Edad en años:
+<input type="text" id="ageMen" onchange="updateRmrMen()" />
+<br />
+<br />
+RMR:
+<input type="text" id="rmrMen" />
+<br />
+<br />
+<u>Para las mujeres:</u>
+<br/>
+<br/>
+Altura expresada en centímetros:
+<input type="text" id="heightWomen" onchange="updateRmrWomen()" />
+<br/>
+Peso expresado en kilos:
+<input type="text" id="weightWomen" onchange="updateRmrWomen()" />
+<br/>
+Edad en años:
+<input type="text" id="ageWomen" onchange="updateRmrWomen()" />
+<br />
+<br />
+RMR:
+<input type="text" id="rmrWomen" />
+</body>
+</html>
+
